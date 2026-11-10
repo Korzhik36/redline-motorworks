@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Оставить заявку на тюнинг-проект REDLINE MOTORWORKS.">
+  <title>Заявка — REDLINE MOTORWORKS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand-lockup" href="index.html"><span class="brand-mark">R</span><span>REDLINE<span class="brand-light"> MOTORWORKS</span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Детали проекта</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">О нас</a></li>
+          <li class="nav-item"><a class="btn btn-redline btn-sm ms-lg-2" href="order.html">Обсудить проект <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<main>
+  <section class="page-hero page-hero-compact"><div class="container"><p class="eyebrow">START YOUR BUILD / 01</p><h1 class="page-title">LET'S MAKE<br><span>IT REAL.</span></h1><p class="page-lead">Расскажи, каким ты видишь свой автомобиль. Мы поможем превратить идею в план работ.</p></div></section>
+  <section class="section-space"><div class="container"><div class="row g-5">
+    <div class="col-12 col-lg-5"><p class="eyebrow">TELL US ABOUT YOUR IDEA</p><h2 class="section-title section-title-small">СОЗДАЙ<br><span>СВОЙ ПРОЕКТ.</span></h2><p class="muted-copy">Заполни форму — это демонстрационный сценарий учебного сайта. Данные никуда не отправляются и не сохраняются на сервере.</p><div class="contact-mini mt-4"><span class="mini-label">ПОДХОД</span><strong>01 / DISCUSS</strong><p>Обсуждаем задачу и желаемый стиль.</p><strong>02 / PLAN</strong><p>Формируем список работ и компонентов.</p><strong>03 / BUILD</strong><p>Переходим к реализации проекта.</p></div></div>
+    <div class="col-12 col-lg-7"><div class="form-panel">
+      <div class="alert alert-success d-none" id="formSuccess" role="alert">Заявка успешно проверена! Это демонстрационная форма: данные не отправлялись на сервер.</div>
+      <div class="alert alert-danger d-none" id="formError" role="alert">Проверь обязательные поля формы.</div>
+      <form id="orderForm" novalidate>
+        <div class="row g-3">
+          <div class="col-12 col-md-6"><label for="clientName" class="form-label">Имя *</label><input class="form-control redline-input" id="clientName" name="name" type="text" placeholder="Как к тебе обращаться" required><div class="invalid-feedback">Укажи своё имя.</div></div>
+          <div class="col-12 col-md-6"><label for="clientPhone" class="form-label">Телефон *</label><div class="input-group"><span class="input-group-text input-addon">+7</span><input class="form-control redline-input" id="clientPhone" name="phone" type="tel" placeholder="999 123-45-67" pattern="[0-9\s()-]{10,15}" required></div><div class="invalid-feedback">Укажи номер телефона.</div></div>
+          <div class="col-12"><label for="clientEmail" class="form-label">Электронная почта</label><input class="form-control redline-input" id="clientEmail" name="email" type="email" placeholder="name@example.com"><div class="invalid-feedback">Проверь адрес электронной почты.</div></div>
+          <div class="col-12 col-md-6"><label for="carModel" class="form-label">Автомобиль *</label><input class="form-control redline-input" id="carModel" name="car" type="text" placeholder="Например, Nissan Silvia S15" required><div class="invalid-feedback">Укажи автомобиль.</div></div>
+          <div class="col-12 col-md-6"><label for="buildType" class="form-label">Направление *</label><select class="form-select redline-input" id="buildType" name="type" required><option value="" selected disabled>Выбери направление</option><option>JDM</option><option>Drift</option><option>Street</option><option>Другое</option></select><div class="invalid-feedback">Выбери направление.</div></div>
+          <div class="col-12"><label for="projectMessage" class="form-label">Расскажи о задумке</label><textarea class="form-control redline-input" id="projectMessage" name="message" rows="4" placeholder="Какие доработки планируешь? Какой результат хочешь получить?"></textarea></div>
+          <div class="col-12"><div class="form-check"><input class="form-check-input redline-check" id="agree" type="checkbox" required><label class="form-check-label small muted-copy" for="agree">Я согласен с обработкой данных в рамках демонстрации формы *</label><div class="invalid-feedback">Необходимо подтвердить согласие.</div></div></div>
+          <div class="col-12 d-flex flex-wrap align-items-center gap-3 mt-2"><button class="btn btn-redline btn-lg" type="submit">Отправить заявку ↗</button><span class="small muted-copy">Поля со звёздочкой обязательны</span></div>
+        </div>
+      </form>
+    </div></div>
+  </div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="row gy-4 align-items-center"><div class="col-md-6"><a class="navbar-brand brand-lockup" href="index.html"><span class="brand-mark">R</span><span>REDLINE<span class="brand-light"> MOTORWORKS</span></span></a><p class="footer-note">BUILT TO PUSH LIMITS. © 2026 REDLINE MOTORWORKS</p></div><div class="col-md-6 text-md-end footer-links"><a href="catalog.html">Проекты</a><a href="contacts.html">О нас</a><a href="order.html">Заявка</a></div></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body></html>
