@@ -25,13 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput?.addEventListener("input", filterProjects);
   categoryFilter?.addEventListener("change", filterProjects);
 
-  // Передаём название и описание выбранной карточки в Bootstrap modal.
+  // Передаём название, описание и адрес страницы выбранного проекта в Bootstrap modal.
   const projectModal = document.getElementById("projectModal");
   projectModal?.addEventListener("show.bs.modal", (event) => {
     const trigger = event.relatedTarget;
     if (!trigger) return;
     projectModal.querySelector("#projectModalLabel").textContent = trigger.dataset.project || "Проект REDLINE";
     projectModal.querySelector("#projectModalDescription").textContent = trigger.dataset.description || "Описание проекта пока не добавлено.";
+    const modalLink = projectModal.querySelector("#projectModalLink");
+    if (modalLink) modalLink.href = trigger.dataset.url || "product.html";
   });
 
   // Клиентская проверка формы. Серверной отправки в учебном проекте нет.
