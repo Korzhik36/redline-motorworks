@@ -1,4 +1,4 @@
-// Фильтрация карточек каталога по названию и направлению.
+  // Фильтрация карточек каталога по названию и направлению.
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("projectSearch");
   const categoryFilter = document.getElementById("categoryFilter");
@@ -58,4 +58,47 @@ document.addEventListener("DOMContentLoaded", () => {
     orderForm.reset();
     success?.scrollIntoView({ behavior: "smooth", block: "center" });
   });
+});
+// Анимация числовых показателей
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+
+    const animateCounter = (counter) => {
+        const target = Number(counter.dataset.target);
+        const duration = 1800;
+        const startTime = performance.now();
+        const padding = Number(counter.dataset.pad || 0);
+
+        const updateCounter = (currentTime) => {
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+
+            // Плавное замедление в конце анимации
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+
+            const currentValue = Math.floor(easeOut * target);
+
+            counter.textContent = String(currentValue).padStart(padding, '0');
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = String(target).padStart(padding, '0');
+            }
+        };
+
+        requestAnimationFrame(updateCounter);
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => observer.observe(counter));
 });

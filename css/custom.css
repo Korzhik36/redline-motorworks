@@ -167,3 +167,208 @@ a { text-decoration: none; }
 @media (max-width: 767.98px) {
   .map-frame iframe { height: 320px; }
 }
+/* ===== FOOTER ===== */
+
+.site-footer {
+    background: #0b0b0f;
+    border-top: 1px solid rgba(153, 51, 255, 0.35);
+    padding: 55px 0 20px;
+    margin-top: 60px;
+    color: #aaa;
+}
+
+.footer-logo {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.footer-logo span {
+    color: #9933ff;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contacts li {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-contacts strong {
+    color: #fff;
+}
+
+.footer-contacts a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-contacts a:hover {
+    color: #9933ff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+}
+.footer-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contacts li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0; /* Не дает иконке сжиматься, если текст длинный */
+    margin-top: 3px; /* Выравнивает иконку по центру первой строки текста */
+    color: #e63946; /* Фирменный красный цвет (можно поменять на любой) */
+}
+
+
+/* ===== UPDATED THREE-COLUMN FOOTER ===== */
+.site-footer {
+  margin-top: 0;
+  padding: 52px 0 20px;
+  background: #0b0b0f;
+  border-top: 1px solid var(--rl-border);
+}
+.footer-main { align-items: flex-start; }
+.footer-brand-column .footer-brand {
+  margin: 0;
+  padding: 0;
+  /* The same brand-lockup class as the header keeps logo size and typography identical. */
+}
+.footer-brand-column .footer-description { max-width: 310px; margin-top: 20px; }
+.footer-title {
+  margin: 0 0 20px;
+  color: var(--rl-white);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.footer-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+.footer-navigation a, .footer-contacts a, .footer-contacts li > span:last-child {
+  color: var(--rl-muted);
+  font-size: .82rem;
+  transition: color .2s ease;
+}
+.footer-navigation a:hover, .footer-contacts a:hover { color: var(--rl-purple-bright); }
+.footer-contacts { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.footer-contacts li { display: flex; flex-direction: column; gap: 2px; margin: 0; }
+.footer-contact-label { color: var(--rl-white); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.footer-bottom { margin-top: 38px; padding-top: 18px; border-top: 1px solid var(--rl-border); text-align: center; }
+.footer-bottom p { margin: 0; color: #77727f; font-size: .72rem; }
+
+/* ===== SERVICES PAGE ===== */
+.service-card { padding: 28px 24px; background: #17151e; border: 1px solid var(--rl-border); transition: transform .2s ease, border-color .2s ease; }
+.service-card:hover { transform: translateY(-5px); border-color: rgba(139,53,240,.65); }
+.service-number { display: block; margin-bottom: 28px; color: var(--rl-purple-bright); font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 900; }
+.service-card h3 { margin-bottom: 14px; color: var(--rl-white); font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 800; }
+.service-card .muted-copy { margin: 0; font-size: .88rem; }
+.service-steps { display: grid; gap: 22px; margin: 0; padding: 0; list-style: none; }
+.service-steps li { display: flex; flex-direction: column; gap: 5px; padding-bottom: 18px; border-bottom: 1px solid var(--rl-border); }
+.service-steps strong { color: var(--rl-white); font-size: .85rem; letter-spacing: .06em; }
+.service-steps span { color: var(--rl-muted); font-size: .82rem; }
+@media (max-width: 991.98px) {
+  .footer-navigation { grid-template-columns: 1fr 1fr; }
+  .footer-brand-column .footer-description { max-width: 100%; }
+}
+@media (max-width: 575.98px) {
+  .site-footer { padding-top: 38px; }
+  .footer-navigation { grid-template-columns: 1fr; }
+}
+/* ===== ОБЪЁМНЫЕ КАРТОЧКИ КОНТАКТОВ НА СТРАНИЦЕ «О НАС» ===== */
+.contact-card-item {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(166, 92, 255, 0.55);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.contact-card-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  color: var(--rl-purple-bright);
+  background: rgba(139, 53, 240, 0.15);
+  border: 1px solid rgba(139, 53, 240, 0.45);
+}
+
+.contact-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-card-item h3 {
+  margin: 6px 0 10px;
+  font-size: 1.65rem;
+}
+
+.contact-card-value {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--rl-white);
+  font-size: 0.98rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.contact-card-link {
+  transition: color 0.2s ease;
+}
+
+.contact-card-link:hover {
+  color: var(--rl-purple-bright);
+}
+
+.contact-card-hint {
+  margin-top: auto;
+  padding-top: 10px;
+  color: var(--rl-muted);
+  font-size: 0.78rem;
+}
