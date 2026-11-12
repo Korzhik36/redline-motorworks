@@ -22,7 +22,7 @@ a { text-decoration: none; }
 .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: white; }
 .btn-redline { --bs-btn-color: #fff; --bs-btn-bg: var(--rl-purple); --bs-btn-border-color: var(--rl-purple); --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #7025cb; --bs-btn-hover-border-color: #7025cb; --bs-btn-active-bg: #6120ae; --bs-btn-active-border-color: #6120ae; border-radius: 2px; padding: .8rem 1.25rem; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .btn-outline-redline { --bs-btn-color: #d7b9ff; --bs-btn-border-color: var(--rl-purple); --bs-btn-hover-color: #fff; --bs-btn-hover-bg: var(--rl-purple); --bs-btn-hover-border-color: var(--rl-purple); border-radius: 2px; font-size: .76rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-.hero-section { position: relative; overflow: hidden; min-height: 650px; background: linear-gradient(90deg, rgba(12,12,16,.98) 0%, rgba(12,12,16,.87) 42%, rgba(12,12,16,.24) 100%), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90') center 56%/cover no-repeat; }
+.hero-section { position: relative; overflow: hidden; min-height: 650px; background: linear-gradient(90deg, rgba(12,12,16,.98) 0%, rgba(12,12,16,.87) 42%, rgba(12,12,16,.24) 100%), url('../images/Nissan_s15_tuning.webp') center 56%/cover no-repeat; }
 .hero-section::after { content: ''; position: absolute; inset: auto 0 0; height: 150px; background: linear-gradient(transparent, var(--rl-bg)); pointer-events: none; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,53,240,.15), transparent 42%); }
 .min-vh-hero { min-height: 650px; }
@@ -371,4 +371,98 @@ a { text-decoration: none; }
   padding-top: 10px;
   color: var(--rl-muted);
   font-size: 0.78rem;
+}
+
+
+/* ===== RICH VISUAL SERVICES PAGE ===== */
+.services-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: 470px;
+  background: linear-gradient(90deg, rgba(12,11,17,.97) 0%, rgba(12,11,17,.87) 36%, rgba(12,11,17,.27) 100%),
+              linear-gradient(0deg, rgba(139,53,240,.14), transparent 60%),
+              url('../images/Nissan_s15_tuning.webp') center 57% / cover no-repeat;
+}
+.services-hero-content { z-index: 1; }
+.services-hero .page-lead { color: #dfdce5; }
+.services-hero-caption { position: absolute; right: 5%; bottom: 25px; color: #e0d5eb; font-size: .65rem; font-weight: 700; letter-spacing: .2em; }
+.services-intro { max-width: 280px; }
+.service-photo-card { padding: 0; overflow: hidden; min-height: 0; display: flex; flex-direction: column; }
+.service-card-media { position: relative; height: 205px; overflow: hidden; background: #221c2d; }
+.service-card-media::after { content: ''; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(10,8,15,.55)); pointer-events: none; }
+.service-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.83); transition: transform .4s ease, filter .3s ease; }
+.service-photo-card:hover .service-card-media img { transform: scale(1.07); filter: saturate(1.08); }
+.service-image-label { position: absolute; z-index: 1; left: 17px; bottom: 15px; font-size: .66rem; color: white; font-weight: 800; letter-spacing: .14em; }
+.service-card-body { display: flex; flex-direction: column; flex: 1; padding: 21px 22px 25px; }
+.service-card-body .service-number { margin-bottom: 6px; font-size: 1.65rem; line-height: 1; }
+.service-card-body h3 { font-size: clamp(1.5rem, 2vw, 1.9rem); margin: 10px 0; }
+.service-card-body .muted-copy { margin-bottom: 22px; flex: 1; }
+.service-card-body .text-link { margin-top: auto; }
+.service-showcase-item { display: block; position: relative; overflow: hidden; height: 100%; min-height: 235px; background: #231c31; border: 1px solid var(--rl-border); }
+.service-showcase-feature { min-height: 496px; }
+.service-showcase-small { min-height: 239px; }
+.service-showcase-item img { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.86); transition: transform .5s ease, filter .3s ease; }
+.service-showcase-item::after { content: ''; position: absolute; inset: 30% 0 0; background: linear-gradient(transparent, rgba(7,7,12,.9)); pointer-events: none; }
+.service-showcase-item:hover img { transform: scale(1.05); filter: saturate(1.1); }
+.service-showcase-overlay { position: absolute; bottom: 20px; left: 24px; right: 24px; z-index: 1; display: grid; gap: 6px; }
+.service-showcase-kicker { color: #d6a9ff; font-size: .68rem; font-weight: 800; letter-spacing: .16em; }
+.service-showcase-overlay strong { color: white; font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 900; line-height: 1; }
+.service-showcase-arrow { position: absolute; right: 0; bottom: 0; font-size: 1.6rem; color: #e0baff; }
+.service-process-image { position: relative; height: 260px; overflow: hidden; border: 1px solid var(--rl-border); }
+.service-process-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.service-process-image::after { content: ''; position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, rgba(9,7,15,.78)); }
+.service-process-image span { position: absolute; left: 20px; bottom: 15px; z-index: 1; color: white; font-weight: 700; font-size: .66rem; letter-spacing: .15em; }
+.services-cta { background: linear-gradient(90deg, rgba(29,18,45,.96), rgba(18,15,27,.85)), url('../images/supra_tuning.jpg') center / cover no-repeat; }
+
+/* ===== LARGE CONTACT DIRECTORY ON ABOUT PAGE ===== */
+.about-contacts-section { background: radial-gradient(circle at 82% 16%, rgba(139,53,240,.09), transparent 35%), var(--rl-bg); }
+.about-contact-card { display: flex; flex-direction: column; min-height: 273px; height: 100%; padding: 28px 32px; background: linear-gradient(135deg, #211b2d 0%, #18171f 68%); border: 1px solid rgba(166,92,255,.24); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.about-contact-card:hover { transform: translateY(-4px); border-color: rgba(166,92,255,.65); box-shadow: 0 20px 40px rgba(0,0,0,.22); }
+.about-contact-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 15px; }
+.about-contact-icon { display: grid; place-items: center; width: 49px; height: 49px; flex-shrink: 0; background: rgba(139,53,240,.19); border: 1px solid rgba(166,92,255,.55); color: #c28cff; }
+.about-contact-icon svg { width: 25px; height: 25px; }
+.about-contact-index { font-size: .63rem; font-weight: 800; letter-spacing: .14em; color: #8d849c; }
+.about-contact-card h3 { margin: 2px 0 10px; color: #d6b2ff; font-size: .75rem; font-weight: 800; letter-spacing: .16em; }
+.about-contact-primary { display: inline-block; align-self: flex-start; color: var(--rl-white); font-family: 'Barlow Condensed', Impact, sans-serif; font-size: clamp(1.85rem, 4vw, 2.65rem); font-weight: 800; letter-spacing: .01em; line-height: 1.03; overflow-wrap: anywhere; transition: color .2s; }
+a.about-contact-primary:hover { color: #c38eff; }
+.about-contact-primary span { color: var(--rl-purple-bright); font-size: .7em; }
+.about-contact-email { font-size: clamp(1.6rem, 3.4vw, 2.35rem); }
+.about-contact-card p { margin: auto 0 0; padding-top: 19px; color: var(--rl-muted); font-size: .82rem; }
+.about-contact-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 26px 30px; background: linear-gradient(110deg, #251a34, #17151d); border: 1px solid rgba(139,53,240,.35); }
+.about-contact-bottom strong { display: block; color: white; font-family: 'Barlow Condensed',sans-serif; font-size: 1.8rem; line-height: 1; }
+#location { scroll-margin-top: 75px; }
+@media (max-width: 767.98px) {
+  .services-hero { min-height: 400px; background-position: 63% center; }
+  .services-hero-caption { display: none; }
+  .service-card-media { height: 230px; }
+  .service-showcase-feature { min-height: 370px; }
+  .service-showcase-small { min-height: 220px; }
+  .about-contact-card { padding: 25px 23px; min-height: 245px; }
+  .about-contact-primary { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  .about-contact-email { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card-media img, .service-showcase-item img, .about-contact-card { transition: none; }
+}
+
+/* Theme-consistent footer contact layout. */
+.footer-contacts li { flex-direction: row; align-items: flex-start; gap: 12px; }
+.footer-contacts li > div { display: flex; flex-direction: column; min-width: 0; }
+.footer-contacts .contact-icon { color: var(--rl-purple-bright); margin-top: 3px; }
+@media (max-width: 575.98px) {
+  .page-title { font-size: clamp(3.25rem, 12vw, 4rem); }
+}
+.footer-navigation a[href="order.html"] {
+    border: 1px solid #8b35f0;
+    color: #d7b9ff;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.footer-navigation a[href="order.html"]:hover {
+    background: #8b35f0;
+    color: white;
 }
